@@ -10,12 +10,9 @@ export const FilterCategoryTag = ({ title, sectionId }: Props) => {
     return (
         <Link
             href={`#${sectionId}`}
-            className='h-auto w-auto flex flex-col justify-between items-center gap-2'
+            className='h-auto w-auto flex flex-col justify-between items-center bg-secondary-600 px-2 py-1 rounded-lg text-text drop-shadow-md'
         >
-            <div className='h-12 w-12 p-2 flex items-center justify-center rounded-full bg-blue-900'>
-                <IoWineOutline className="h-full w-full" />
-            </div>
-            <span className='w-full text-xs font-medium text-center'>{title}</span>
+            <span className='w-full text-xs text-center'>{title}</span>
         </Link>
     )
 }

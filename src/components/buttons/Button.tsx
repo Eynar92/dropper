@@ -8,7 +8,7 @@ interface Props {
 
 export const Button = ({ title, href = '/catalog/products', className }: Props) => {
     return (
-        <Link href={href} className={`${className} text-center px-2 py-1 bg-blue-950 rounded-lg font-light hover:bg-blue-800 transition-colors`}>
+        <Link href={href} className={`${className} text-center px-2 py-1 rounded-lg transition-colors drop-shadow-md`}>
             {title}
         </Link>
     )

@@ -21,7 +21,7 @@ export const ProductModal = () => {
     <div
       id='wrapperModal'
       onClick={handleCloseModal}
-      className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-25 backdrop-blur-sm"
+      className="fixed inset-0 flex items-center justify-center bg-principal bg-opacity-25 backdrop-blur-sm h-screen z-10"
     >
       <div className="flex flex-col items-center justify-between w-[90%] max-w-96 h-[90%] max-h-[576px] bg-slate-200 rounded-lg">
         <div className='flex gap-8 items-center w-full p-4 text-black bg-white shadow-xl rounded-t-lg'>

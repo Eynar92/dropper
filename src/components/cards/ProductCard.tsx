@@ -1,7 +1,7 @@
 'use client'
 
 import Image from "next/image"
-import { IoStarOutline } from 'react-icons/io5'
+import { IoStarOutline, IoAddCircleOutline } from 'react-icons/io5'
 import BeefeaterLondon from '@/assets/bottles-images/BeefeaterLondon.webp'
 import { Button } from "..";
 import Link from "next/link";
@@ -22,7 +22,7 @@ export const ProductCard = ({ promoTag, title, price, rating, reviews }: Props) 
     return (
         <div
             onClick={() => setIsModalOpen(true)}
-            className="flex flex-col gap-4 w-full max-w-48 h-auto p-2 border border-slate-700 rounded-lg"
+            className="flex flex-col gap-4 w-full max-w-48 h-auto p-2 bg-dark-900 rounded-lg text-text drop-shadow-md"
         >
             <div className="w-full h-auto flex items-center justify-start flex-1">
                 <div className={`${promoTag ? '' : 'hidden'} flex items-center gap-2 max-w-[80%] w-auto h-auto bg-red-700 px-2 py-1 rounded-e-lg`}>
@@ -44,9 +44,12 @@ export const ProductCard = ({ promoTag, title, price, rating, reviews }: Props) 
                     <IoStarOutline />
                     <span>{rating} ({reviews})</span>
                 </div>
-                <div className="flex flex-col gap-2 text-sm">
-                    <h3 className="font-semibold truncate">{title}</h3>
-                    <span>{price}</span>
+                <div className="flex flex-col gap-2">
+                    <h3 className="font-semibold truncate text-sm">{title}</h3>
+                    <div className="flex justify-between">
+                        <span className="font-bold">{price}</span>
+                        <IoAddCircleOutline className="h-full w-auto text-single-500 hover:text-single-400 transition-colors" />
+                    </div>
                 </div>
             </div>
         </div>
